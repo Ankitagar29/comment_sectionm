@@ -1,0 +1,31 @@
+.comment_section_component{
+    min-height:200px;
+    padding:16px;
+    width:650px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    margin:8px;
+}
+.input_name{
+    height:32px;
+    width:600px;
+    margin-top: 8px;
+}
+.input_comment{
+    height:60px;
+    width:600px;
+    margin-top: 8px;
+}
+.button_container{
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+.post_button{
+    background-color: blue;
+    color:white;
+    padding:8px 24px;
+    border-radius: 4px;
+}

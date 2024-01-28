@@ -1,11 +1,35 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
-
+import CommentSection from './CommentSection';
+import CommentViewSection from './CommentViewSection';
 function App() {
+  const [comment,setComment]=useState({
+    name:'',comment:''
+
+  });
+  const[commentData,setCommentData]=useState([]);
+  
+  useEffect(()=>{
+    const commentData=localStorage.getItem('comments')
+    
+      
+      if(commentData){
+        setCommentData(()=>[
+        ...JSON.parse(localStorage.getItem('comments'))])
+      }    
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
+        <h1 className="header">Comment Section</h1>
+        
+
+      
+        <CommentSection commentData={commentData} setCommentData={setCommentData} comment={comment} setComment={setComment}/>
+        <CommentViewSection commentData={commentData} setCommentData={setCommentData} />
+       
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,8 +40,8 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
+        </a> */}
+
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.comment{
+    min-height:100px;
+    padding:16px;
+    width:650px;
+    background-color: #D3D3D3;
+    
+    gap:16px;
+    margin:8px;
+}
+.comment_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.button_comment{
+
+    border: none;
+    color:blue;
+    background: none;
+    font-weight: 700;
+    
+}
+.button_container{
+    display: flex;
+    justify-content: flex-start;
+}
+.reply_section_comment{
+    margin-top: 8px;
+    background-color: aliceblue;
+}
